@@ -5,7 +5,7 @@ import {movies} from './src/constants/mockData';
 const App = () => {
   return (
     <SafeAreaView>
-      <Text>sdasd</Text>
+      <Text>Home</Text>
       <MoviesList movies={movies} />
     </SafeAreaView>
   );
