@@ -1,9 +1,21 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import {Text, View, Image} from 'react-native';
+
+import {getConfiguration} from '../api/api';
 
 export function Movie(props) {
   const {movie} = props;
   const [image_base_url, setImageBaseUrl] = useState('');
+
+  const getImageUrl = async () => {
+    const imageUrl = await getConfiguration();
+    setImageBaseUrl(imageUrl);
+  };
+
+  useEffect(() => {
+    getImageUrl();
+  }, []);
+
   return (
     <View>
       <Image

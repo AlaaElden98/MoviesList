@@ -1,14 +1,10 @@
 import React, {useState} from 'react';
 import {SafeAreaView, Text} from 'react-native';
-import {MoviesList} from './src/components/MoviesList';
-import {movies} from './src/constants/mockData';
+
+import HomeScreen from './src/screens/HomeScreen';
+
 const App = () => {
-  return (
-    <SafeAreaView>
-      <Text>Home</Text>
-      <MoviesList movies={movies} />
-    </SafeAreaView>
-  );
+  return <HomeScreen />;
 };
 
 export default App;
