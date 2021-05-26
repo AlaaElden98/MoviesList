@@ -9,9 +9,9 @@ export function MoviesList() {
   const [totalPages, setTotalPages] = useState();
   const [movies, setMovies] = useState([]);
 
-  const getMoviesData = async () => {
-    const data = await getMoviesList();
-    setMovies(data.results);
+  const getMoviesData = async page => {
+    const data = await getMoviesList(page);
+    setMovies([...movies, ...data.results]);
     setPage(data.page);
     setTotalPages(data.total_pages);
   };
@@ -20,6 +20,12 @@ export function MoviesList() {
     getMoviesData();
   }, []);
 
+  const onEndReached = () => {
+    console.log('EndReacshed');
+    getMoviesData(page < totalPages ? page + 1 : page);
+    console.log(page);
+    console.log(totalPages);
+  };
   const renderItem = ({item}) => {
     return <Movie movie={item} />;
   };
@@ -29,6 +35,8 @@ export function MoviesList() {
       data={movies}
       renderItem={renderItem}
       keyExtractor={item => item.id}
+      onEndReachedThreshold={0}
+      onEndReached={onEndReached}
     />
   );
 }
