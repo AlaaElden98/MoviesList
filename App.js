@@ -1,17 +1,14 @@
-
-import React from 'react';
-import {
-  SafeAreaView,
-  Text,
-} from 'react-native';
-
-const App = () => {  
+import React, {useState} from 'react';
+import {SafeAreaView, Text} from 'react-native';
+import {MoviesList} from './src/components/MoviesList';
+import {movies} from './src/constants/mockData';
+const App = () => {
   return (
     <SafeAreaView>
-      <Text>React-native app</Text>
+      <Text>sdasd</Text>
+      <MoviesList movies={movies} />
     </SafeAreaView>
   );
 };
-
 
 export default App;

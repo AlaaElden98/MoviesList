@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Movie renders correctly 1`] = `
+<View>
+  <Image
+    source={
+      Object {
+        "uri": "https://image.tmdb.org/t/p/w500mockPath",
+      }
+    }
+    style={
+      Object {
+        "height": 100,
+        "width": 100,
+      }
+    }
+  />
+  <Text>
+    mockTitle
+  </Text>
+  <Text>
+    mockOverView
+  </Text>
+  <Text />
+</View>
+`;
