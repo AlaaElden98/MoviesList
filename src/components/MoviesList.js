@@ -4,10 +4,11 @@ import {FlatList} from 'react-native';
 import {Movie} from './Movie';
 import {getMoviesList} from '../api/api';
 
-export function MoviesList() {
+export function MoviesList(props) {
   const [page, setPage] = useState(0);
-  const [totalPages, setTotalPages] = useState();
+  const [totalPages, setTotalPages] = useState(0);
   const [movies, setMovies] = useState([]);
+  const {imageBaseUrl} = props;
 
   const getMoviesData = async page => {
     const data = await getMoviesList(page);
@@ -21,13 +22,11 @@ export function MoviesList() {
   }, []);
 
   const onEndReached = () => {
-    console.log('EndReacshed');
     getMoviesData(page < totalPages ? page + 1 : page);
-    console.log(page);
-    console.log(totalPages);
   };
+
   const renderItem = ({item}) => {
-    return <Movie movie={item} />;
+    return <Movie movie={item} imageBaseUrl={imageBaseUrl} />;
   };
 
   return (
@@ -35,7 +34,7 @@ export function MoviesList() {
       data={movies}
       renderItem={renderItem}
       keyExtractor={item => item.id}
-      onEndReachedThreshold={0}
+      onEndReachedThreshold={0.5}
       onEndReached={onEndReached}
     />
   );
