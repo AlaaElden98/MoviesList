@@ -2,22 +2,7 @@
 
 exports[`MoviesList renders correctly 1`] = `
 <RCTScrollView
-  data={
-    Array [
-      Object {
-        "id": 578701,
-        "overview": "Mock overview 1",
-        "poster_path": "/nkayOAUBUu4mMvyNf9iHSUiPjF1.jpg",
-        "title": "Mock title 1",
-      },
-      Object {
-        "id": 578702,
-        "overview": "Mock overview 1",
-        "poster_path": "/iDdpiUnCeXvBmrkBFpL6lKsZt33.jpg",
-        "title": "Mock title 1",
-      },
-    ]
-  }
+  data={Array []}
   disableVirtualization={false}
   getItem={[Function]}
   getItemCount={[Function]}
@@ -26,7 +11,8 @@ exports[`MoviesList renders correctly 1`] = `
   keyExtractor={[Function]}
   maxToRenderPerBatch={10}
   onContentSizeChange={[Function]}
-  onEndReachedThreshold={2}
+  onEndReached={[Function]}
+  onEndReachedThreshold={0.5}
   onLayout={[Function]}
   onMomentumScrollEnd={[Function]}
   onScroll={[Function]}
@@ -40,61 +26,6 @@ exports[`MoviesList renders correctly 1`] = `
   viewabilityConfigCallbackPairs={Array []}
   windowSize={21}
 >
-  <View>
-    <View
-      onLayout={[Function]}
-      style={null}
-    >
-      <View>
-        <Image
-          source={
-            Object {
-              "uri": "https://image.tmdb.org/t/p/w500/nkayOAUBUu4mMvyNf9iHSUiPjF1.jpg",
-            }
-          }
-          style={
-            Object {
-              "height": 100,
-              "width": 100,
-            }
-          }
-        />
-        <Text>
-          Mock title 1
-        </Text>
-        <Text>
-          Mock overview 1
-        </Text>
-        <Text />
-      </View>
-    </View>
-    <View
-      onLayout={[Function]}
-      style={null}
-    >
-      <View>
-        <Image
-          source={
-            Object {
-              "uri": "https://image.tmdb.org/t/p/w500/iDdpiUnCeXvBmrkBFpL6lKsZt33.jpg",
-            }
-          }
-          style={
-            Object {
-              "height": 100,
-              "width": 100,
-            }
-          }
-        />
-        <Text>
-          Mock title 1
-        </Text>
-        <Text>
-          Mock overview 1
-        </Text>
-        <Text />
-      </View>
-    </View>
-  </View>
+  <View />
 </RCTScrollView>
 `;
