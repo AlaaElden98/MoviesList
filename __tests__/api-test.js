@@ -14,7 +14,7 @@ describe('getMoviesList returns movies list', () => {
     const res = await getMoviesList(1, true);
     expect(res).toBe(200);
   });
-  it('Make bad request', async () => {
+  it('Make request with invalid page number', async () => {
     const res = await getMoviesList(0, true);
     expect(res).toBeGreaterThan(200);
   });

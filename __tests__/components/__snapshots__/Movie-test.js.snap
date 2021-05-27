@@ -1,26 +1,107 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Movie renders correctly 1`] = `
-<View>
-  <Image
-    source={
-      Object {
-        "uri": "undefinedw500/mockPath",
-      }
+exports[`it renders movie item 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "white",
+      "borderRadius": 20,
+      "borderWidth": 0,
+      "flex": 1,
+      "flexDirection": "row",
+      "margin": 8,
+      "padding": 10,
     }
+  }
+>
+  <View
     style={
       Object {
-        "height": 100,
-        "width": 100,
+        "alignItems": "center",
+        "borderRadius": 10,
+        "borderWidth": 2,
+        "justifyContent": "center",
       }
     }
-  />
-  <Text>
-    mockTitle
-  </Text>
-  <Text>
-    mockOverView
-  </Text>
-  <Text />
+  >
+    <Text>
+      Image not availiable
+    </Text>
+  </View>
+  <View
+    style={
+      Object {
+        "flex": 1,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "margin": 5,
+        }
+      }
+    >
+      <Text
+        ellipsizeMode="tail"
+        numberOfLines={1}
+        style={
+          Object {
+            "fontSize": 45.89389937671454,
+            "fontWeight": "bold",
+            "textDecorationLine": "underline",
+          }
+        }
+      >
+        mockTitle
+      </Text>
+    </View>
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "flex": 1,
+          "margin": 5,
+          "padding": 5,
+        }
+      }
+    >
+      <Text
+        ellipsizeMode="tail"
+        numberOfLines={8}
+        style={
+          Object {
+            "fontSize": 30.595932917809698,
+          }
+        }
+      >
+        mockOverView
+      </Text>
+    </View>
+    <View
+      style={
+        Object {
+          "alignItems": "flex-start",
+          "flex": 1,
+          "justifyContent": "flex-end",
+          "marginLeft": 5,
+          "padding": 5,
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "color": "grey",
+            "fontSize": 30.595932917809698,
+            "fontStyle": "italic",
+          }
+        }
+      >
+        Release date : 
+      </Text>
+    </View>
+  </View>
 </View>
 `;

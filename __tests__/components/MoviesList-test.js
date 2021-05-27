@@ -5,7 +5,7 @@ import {MoviesList} from '../../src/components/MoviesList';
 import {movies} from '../../src/constants/mockData';
 
 const imageBaseUrl = 'https://image.tmdb.org/t/p/';
-test('MoviesList renders correctly', () => {
+test('it renders a list of movies', () => {
   const tree = renderer
     .create(<MoviesList movies={movies} imageBaseUrl={imageBaseUrl} />)
     .toJSON();

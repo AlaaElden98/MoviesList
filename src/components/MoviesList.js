@@ -3,6 +3,7 @@ import {FlatList} from 'react-native';
 
 import {Movie} from './Movie';
 import {getMoviesList} from '../api/api';
+import {CustomActivityIndicator} from './CustomActivityIndicator';
 
 export function MoviesList(props) {
   const [page, setPage] = useState(0);
@@ -12,7 +13,7 @@ export function MoviesList(props) {
 
   const getMoviesData = async page => {
     const data = await getMoviesList(page);
-    setMovies([...movies, ...data.results]);
+    movies ? setMovies([...movies, ...data.results]) : setMovies(data.results);
     setPage(data.page);
     setTotalPages(data.total_pages);
   };
@@ -36,6 +37,7 @@ export function MoviesList(props) {
       keyExtractor={item => item.id}
       onEndReachedThreshold={0.5}
       onEndReached={onEndReached}
+      ListFooterComponent={CustomActivityIndicator}
     />
   );
 }

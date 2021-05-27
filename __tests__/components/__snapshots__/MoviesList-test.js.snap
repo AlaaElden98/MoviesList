@@ -1,7 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`MoviesList renders correctly 1`] = `
+exports[`it renders a list of movies 1`] = `
 <RCTScrollView
+  ListFooterComponent={[Function]}
   data={Array []}
   disableVirtualization={false}
   getItem={[Function]}
@@ -26,6 +27,21 @@ exports[`MoviesList renders correctly 1`] = `
   viewabilityConfigCallbackPairs={Array []}
   windowSize={21}
 >
-  <View />
+  <View>
+    <View
+      onLayout={[Function]}
+    >
+      <View
+        style={Object {}}
+      >
+        <ActivityIndicator
+          animating={true}
+          color="#999999"
+          hidesWhenStopped={true}
+          size="small"
+        />
+      </View>
+    </View>
+  </View>
 </RCTScrollView>
 `;
