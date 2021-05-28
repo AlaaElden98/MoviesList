@@ -11,7 +11,9 @@ exports[`it renders an error message 1`] = `
     }
   }
 >
-  <Text>
+  <Text
+    accessibilityLabel="Image not availiable"
+  >
     Image not availiable
   </Text>
 </View>

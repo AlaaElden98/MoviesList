@@ -7,7 +7,11 @@ import {responsiveFontSize, responsiveWidth} from '../utils/helperFunctions';
 export function Movie(props) {
   const {movie, imageBaseUrl} = props;
   return (
-    <View style={styles.container}>
+    <View
+      style={styles.container}
+      accessibilityLabel={
+        'Movie item includes poster,title,overview,and the release date of the movie'
+      }>
       {imageBaseUrl ? (
         <Image
           source={{
@@ -20,6 +24,8 @@ export function Movie(props) {
             borderRadius: 8,
           }}
           resizeMode="stretch"
+          accessible={true}
+          accessibilityLabel={`Poster of ${movie.title} movie`}
         />
       ) : (
         <NoImage />
@@ -27,17 +33,27 @@ export function Movie(props) {
 
       <View style={styles.textDataContainer}>
         <View style={styles.titleContainer}>
-          <Text numberOfLines={1} ellipsizeMode="tail" style={styles.title}>
+          <Text
+            numberOfLines={1}
+            ellipsizeMode="tail"
+            style={styles.title}
+            accessibilityLabel={`Movie name: ${movie.title}`}>
             {movie.title}
           </Text>
         </View>
         <View style={styles.overViewContainer}>
-          <Text numberOfLines={8} ellipsizeMode="tail" style={styles.overview}>
+          <Text
+            numberOfLines={8}
+            ellipsizeMode="tail"
+            style={styles.overview}
+            accessibilityLabel={`Movie overview: ${movie.overview}`}>
             {movie.overview}
           </Text>
         </View>
         <View style={styles.releaseDateContainer}>
-          <Text style={styles.releaseDate}>
+          <Text
+            style={styles.releaseDate}
+            accessibilityLabel={`Release date : ${movie.release_date}`}>
             Release date : {movie.release_date}
           </Text>
         </View>

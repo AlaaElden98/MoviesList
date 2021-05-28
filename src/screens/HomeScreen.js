@@ -16,7 +16,9 @@ const HomeScreen = () => {
     <SafeAreaView style={styles.container}>
       <StatusBar barStyle="light-content" />
       <View style={styles.topBar}>
-        <Text style={styles.topBarText}>Home</Text>
+        <Text style={styles.topBarText} accessibilityLabel={'Home page'}>
+          Home
+        </Text>
       </View>
       <View style={styles.divider} />
       <MoviesList imageBaseUrl={imageBaseUrl} />

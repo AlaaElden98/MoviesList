@@ -2,6 +2,7 @@
 
 exports[`it renders movie item 1`] = `
 <View
+  accessibilityLabel="Movie item includes poster,title,overview,and the release date of the movie"
   style={
     Object {
       "backgroundColor": "white",
@@ -24,7 +25,9 @@ exports[`it renders movie item 1`] = `
       }
     }
   >
-    <Text>
+    <Text
+      accessibilityLabel="Image not availiable"
+    >
       Image not availiable
     </Text>
   </View>
@@ -44,6 +47,7 @@ exports[`it renders movie item 1`] = `
       }
     >
       <Text
+        accessibilityLabel="Movie name: mockTitle"
         ellipsizeMode="tail"
         numberOfLines={1}
         style={
@@ -68,6 +72,7 @@ exports[`it renders movie item 1`] = `
       }
     >
       <Text
+        accessibilityLabel="Movie overview: mockOverView"
         ellipsizeMode="tail"
         numberOfLines={8}
         style={
@@ -91,6 +96,7 @@ exports[`it renders movie item 1`] = `
       }
     >
       <Text
+        accessibilityLabel="Release date : undefined"
         style={
           Object {
             "color": "grey",

@@ -4,7 +4,9 @@ import {Text, View, StyleSheet} from 'react-native';
 export function NoImage() {
   return (
     <View style={styles.container}>
-      <Text>Image not availiable</Text>
+      <Text accessibilityLabel={'Image not availiable'}>
+        Image not availiable
+      </Text>
     </View>
   );
 }
