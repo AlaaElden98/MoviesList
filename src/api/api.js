@@ -1,3 +1,4 @@
+// The api key could be encrypted somehow, so no one else uses it
 const api_key = 'acea91d2bff1c53e6604e4985b6989e2&p';
 
 /**

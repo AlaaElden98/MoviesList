@@ -1,5 +1,4 @@
-import React, {useState} from 'react';
-import {SafeAreaView, Text} from 'react-native';
+import React from 'react';
 
 import HomeScreen from './src/screens/HomeScreen';
 

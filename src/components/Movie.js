@@ -17,7 +17,6 @@ export function Movie(props) {
           source={{
             uri: imageBaseUrl + 'w500' + movie.poster_path,
           }}
-          // Test this
           style={{
             width: responsiveWidth(30),
             height: responsiveWidth(65),
@@ -41,7 +40,7 @@ export function Movie(props) {
             {movie.title}
           </Text>
         </View>
-        <View style={styles.overViewContainer}>
+        <View style={styles.overviewContainer}>
           <Text
             numberOfLines={8}
             ellipsizeMode="tail"
@@ -76,7 +75,7 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   overview: {fontSize: responsiveFontSize(2)},
-  overViewContainer: {
+  overviewContainer: {
     flex: 1,
     margin: 5,
     padding: 5,

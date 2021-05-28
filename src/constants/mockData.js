@@ -1,3 +1,4 @@
+// Mock data used in tests and debugging
 export const movies = [
   {
     poster_path: '/nkayOAUBUu4mMvyNf9iHSUiPjF1.jpg',
@@ -8,8 +9,8 @@ export const movies = [
   {
     poster_path: '/iDdpiUnCeXvBmrkBFpL6lKsZt33.jpg',
     id: 578702,
-    overview: 'Mock overview 1',
-    title: 'Mock title 1',
+    overview: 'Mock overview 2',
+    title: 'Mock title 2',
   },
 ];
 

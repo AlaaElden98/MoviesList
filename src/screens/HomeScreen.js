@@ -4,10 +4,11 @@ import {SafeAreaView, Text, StatusBar, View, StyleSheet} from 'react-native';
 import {MoviesList} from '../components/MoviesList';
 import {getConfiguration} from '../api/api';
 import {responsiveFontSize} from '../utils/helperFunctions';
+
 const HomeScreen = () => {
   const [imageBaseUrl, setImageBaseUrl] = useState();
 
-  // We only need to this once to get the api configuration, espicially the images_secure_url
+  // We only need to do this once to get the api configuration, espicially the images_secure_url
   (async function getImageBaseUrl() {
     setImageBaseUrl(await getConfiguration());
   })();
