@@ -17,11 +17,7 @@ export function Movie(props) {
           source={{
             uri: imageBaseUrl + 'w500' + movie.poster_path,
           }}
-          style={{
-            width: responsiveWidth(30),
-            height: responsiveWidth(65),
-            borderRadius: 8,
-          }}
+          style={styles.image}
           resizeMode="stretch"
           accessible={true}
           accessibilityLabel={`Poster of ${movie.title} movie`}
@@ -101,5 +97,10 @@ const styles = StyleSheet.create({
     fontSize: responsiveFontSize(2),
     color: 'grey',
     fontStyle: 'italic',
+  },
+  image: {
+    width: responsiveWidth(30),
+    height: responsiveWidth(65),
+    borderRadius: 8,
   },
 });

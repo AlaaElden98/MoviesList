@@ -11,8 +11,8 @@ export function MoviesList(props) {
   const [movies, setMovies] = useState([]);
   const {imageBaseUrl} = props;
 
-  const getMoviesData = async page => {
-    const data = await getMoviesList(page);
+  const getMoviesData = async pageNumber => {
+    const data = await getMoviesList(pageNumber);
     movies ? setMovies([...movies, ...data.results]) : setMovies(data.results);
     setPage(data.page);
     setTotalPages(data.total_pages);

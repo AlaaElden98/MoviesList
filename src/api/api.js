@@ -24,7 +24,9 @@ const configuration_base_url =
 export async function getConfiguration(debug) {
   try {
     const response = await fetch(configuration_base_url + api_key);
-    if (debug) return response.status;
+    if (debug) {
+      return response.status;
+    }
     const data = await response.json();
     const image_base_url = await data.images.secure_base_url;
     return image_base_url;
