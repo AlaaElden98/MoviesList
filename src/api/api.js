@@ -1,17 +1,19 @@
 // The api key could be encrypted somehow, so no one else uses it
-const api_key = 'acea91d2bff1c53e6604e4985b6989e2&p';
+const API_KEY = 'acea91d2bff1c53e6604e4985b6989e2&p';
+const base_url = 'http://api.themoviedb.org/3/';
+const api_key = 'api_key='
 
 /**
  * See  https://developers.themoviedb.org/3/discover/movie-discover
  */
-const movies_base_Url = 'http://api.themoviedb.org/3/discover/movie?api_key=';
-export async function getMoviesList(page = 1, debug = false) {
+const movies_path = 'discover/movie?'
+export async function getMoviesList(page) {
   try {
-    const response = await fetch(movies_base_Url + api_key + `&page=${page}`);
-    const data = await (debug ? response.status : response.json());
+    const response = await fetch(base_url + movies_path + api_key + API_KEY + `&page=${page}`);
+    const data = await response.json();
+    if (!response.ok) return (data.status_message)
     return data;
   } catch (error) {
-    console.log(error);
     return error;
   }
 }
@@ -19,15 +21,12 @@ export async function getMoviesList(page = 1, debug = false) {
 /**
  * See  https://developers.themoviedb.org/3/configuration/get-api-configuration
  */
-const configuration_base_url =
-  'https://api.themoviedb.org/3/configuration?api_key=';
-export async function getConfiguration(debug) {
+const configuration_path = 'configuration?';
+export async function getConfiguration() {
   try {
-    const response = await fetch(configuration_base_url + api_key);
-    if (debug) {
-      return response.status;
-    }
+    const response = await fetch(base_url + configuration_path + api_key + API_KEY);
     const data = await response.json();
+    if(!response.ok)return (data.status_message)
     const image_base_url = await data.images.secure_base_url;
     return image_base_url;
   } catch (err) {
