@@ -22,8 +22,8 @@ Follow the instructions from react native [docs](https://reactnative.dev/docs/en
 - Run the following commands :
   - `npm install` to download the dependencies and generates node_module.
   - `npm start` to starts Metro Bundler.
-  - `npm android` to run on android device/emulator.
-  - `npm ios` to run on ios device/emulator.
+  - `npm run android` to run on android device/emulator.
+  - `npm run ios` to run on ios device/emulator.
 
 ### Run tests
 
@@ -41,6 +41,4 @@ The app main function is to displays a list of movies fetched through a web API.
 - For each movie, the following should be displayed: title, overview, date, poster.
 - List should lazily load more data as you scroll down. A loading indicator should be displayed at the bottom
   of the list when new data is still loading.
-- The code coverage should be over 80%.
 - Following the react native [Accessibility](https://reactnative.dev/docs/accessibility) to make the app usable by the people with disabilities.
-- There's no using of any third party libraries, so the app is only depending on the API
