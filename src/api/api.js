@@ -1,5 +1,5 @@
-// The api key could be encrypted somehow, so no one else uses it
-const API_KEY = 'acea91d2bff1c53e6604e4985b6989e2&p';
+import {API_KEY} from "@env"
+
 const base_url = 'http://api.themoviedb.org/3/';
 const api_key = 'api_key='
 
@@ -11,6 +11,7 @@ export async function getMoviesList(page) {
   try {
     const response = await fetch(base_url + movies_path + api_key + API_KEY + `&page=${page}`);
     const data = await response.json();
+    console.log(API_KEY);
     if (!response.ok) return (data.status_message)
     return data;
   } catch (error) {
